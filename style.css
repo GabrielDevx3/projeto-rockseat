@@ -125,6 +125,7 @@ footer a {
 
 }
 
+
 #switch button {
     width: 32px;
     height: 32px;
@@ -136,12 +137,12 @@ footer a {
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+    animation: slide-back 0.3s;
 
 }
 
 .light #switch button {
-    right: 0;
-    left: initial;
+    animation: slide-in 0.4s forwards;
 }
 
 #switch span {
@@ -164,3 +165,26 @@ footer a {
         --bg-url: url(./assets/bg-desktop-light.jpg)
     }
 }   
+
+@keyframes slide-in {
+
+    from {
+        left: 0;
+    }
+    
+    to {
+        left: 60%;
+    }
+}
+
+@keyframes slide-back {
+
+    from {
+        left: 60%;
+    }
+    
+    to {
+        left: 0;
+    }
+}
+
